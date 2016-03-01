@@ -16,11 +16,9 @@ var reload = browserSync.reload;
 var paths = {
   styles : 'assets/styles/**/*.scss',
   scripts : 'assets/scripts/**/*.js',
-  images : 'assets/images/**/*',
   build : {
-    styles : 'public/styles/',
-    scripts : 'public/scripts/',
-    images : 'public/images/'
+    styles : 'assets/min/',
+    scripts : 'assets/min/'
   }
 };
 
@@ -54,25 +52,16 @@ gulp.task('scripts', function() {
   gulp.src(paths.scripts)
     .pipe(sourcemaps.init())
       .pipe(babel())
-      .pipe(concat('scripts.min.js'))
+      .pipe(concat('main.js'))
       .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.build.scripts))
     .pipe(reload({stream : true}));
 });
 
-/*
-  Images
-*/
-gulp.task('images', function() {
-  gulp.src(paths.images)
-    .pipe(gulp.dest(paths.build.images))
-    .pipe(reload({stream : true}));
-});
-
-gulp.task('default', ['images','styles','scripts', 'browser-sync'], function() {
+gulp.task('default', ['styles','scripts', 'browser-sync'], function() {
   gulp.watch(
-    [paths.images, paths.styles, paths.scripts],
-    ['images','styles','scripts']
+    [paths.styles, paths.scripts],
+    ['styles','scripts']
   )
 });

@@ -1,28 +1,40 @@
-.greeting-title {
-  margin: 0;
-  font-size: 8vw;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
+.greeting {
+  font-family: "Georgia", serif;
+  font-style: italic;
 
-  a { text-decoration: none; }
+  a {
+    display: inline-block;
+    padding: 0 0.125em;
+    background: transparentize(#0094d8, 0.75);
+    text-decoration: none;
+    transition: background 500ms ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: #0094d8;
+    }
+  }
 }
 
-.greeting-byline {
-  display: block;
-  margin-bottom: 0.5em;
-  font-family: 'Georgia';
-  font-weight: normal;
-  font-size: 4.5vw;
-  font-style: italic;
-  text-transform: none;
-  opacity: 0.75;
+.greeting-title {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-size: 12vw;
+  text-transform: uppercase;
+
+  @include bp($bp-greeting) {
+    font-size: 100px;
+  }
 }
 
 .greeting-desc {
-  max-width: 50%;
-  margin: 0 auto 0.25em;
-  font-size: 4.5vw;
-  font-family: 'Georgia';
-  font-style: italic;
+  max-width: 15em;
+  margin: 0 auto;
+  font-size: 5vw;
+
+  @include bp($bp-greeting) {
+    font-size: 42px;
+  }
 }

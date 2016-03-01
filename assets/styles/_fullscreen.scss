@@ -10,8 +10,13 @@
 }
 
 .fullscreen-text--blue {
-  background: transparentize(#0094d8, 0.75);
+  background: transparentize(#0094d8, 0.5);
   color: white;
+  transition: background 500ms ease-in-out;
+
+  @include bp($bp-greeting) {
+    background: transparentize(#0094d8, 0.75);
+  }
 }
 
 .fullscreen-image {

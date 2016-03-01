@@ -11,6 +11,7 @@
 */
 
 $bp-bg-video: 800px;
+$bp-greeting: 800px;
 
 /*
   Imports
@@ -26,6 +27,7 @@ $bp-bg-video: 800px;
 
 html {
   box-sizing: border-box;
+
   *,
   *::before,
   *::after {

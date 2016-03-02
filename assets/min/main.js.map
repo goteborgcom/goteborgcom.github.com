@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":["console","log"],"mappings":"AAIAA,QAAQC,IAAI","file":"main.js","sourcesContent":["/*\r\n  Babel JS\r\n*/\r\n\r\nconsole.log('YEEEEEAH!');\r\n"],"sourceRoot":"/source/"}
+{"version":3,"sources":["main.js"],"names":["aframe","require"],"mappings":"AAIA,GAAIA,QAASC,QAAQ","file":"main.js","sourcesContent":["/*\r\n  Babel JS\r\n*/\r\n\r\nvar aframe = require('../node_modules/aframe/dist/aframe.js');\r\n"],"sourceRoot":"/source/"}

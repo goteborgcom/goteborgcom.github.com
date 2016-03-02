@@ -2,4 +2,4 @@
   Babel JS
 */
 
-console.log('YEEEEEAH!');
+import aframe from 'aframe';

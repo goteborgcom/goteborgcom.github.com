@@ -12,6 +12,7 @@
 
 $bp-bg-video: 800px;
 $bp-greeting: 800px;
+$bp-article: 500px;
 
 /*
   Imports
@@ -20,6 +21,8 @@ $bp-greeting: 800px;
 @import '../../node_modules/normalize.css/normalize';
 @import 'fullscreen';
 @import 'greeting';
+@import 'article';
+@import 'type';
 
 /*
   Base
@@ -27,6 +30,7 @@ $bp-greeting: 800px;
 
 html {
   box-sizing: border-box;
+  line-height: 1.7;
 
   *,
   *::before,
@@ -35,6 +39,10 @@ html {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
-  color: white;
+  color: #0094d8;
 }

@@ -1,0 +1,27 @@
+.article-header,
+.article-body,
+.article-info {
+  max-width: 47rem;
+  margin: 1.5rem   auto;
+}
+
+.article-image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include bp($bp-article) {
+    padding-bottom: 56.25%;
+  }
+}
+
+.article-info {
+  padding: 0.5rem 1rem;
+  border: 1px solid #eae4de;
+  background: #f9f6f3;
+  
+  h3 {color: #0094d8;}
+}

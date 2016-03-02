@@ -22,6 +22,7 @@
 .fullscreen-image {
   position: relative;
   z-index: 1;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -30,7 +31,7 @@
   display: none;
 
   @include bp($bp-bg-video) {
-    position: fixed;
+    position: absolute;
     z-index: 2;
     display: block;
     top: 50%;

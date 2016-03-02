@@ -1,9 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Meta tags - pages.goteborg.com</title>
+  <link rel="canonical" href="http://pages.goteborg.com/things/meta-tags.html">
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "email": "redaktionen(at)goteborg.com",
+    "name": "Goteborg.com",
+    "logo": "http://pages.goteborg.com/images/goteborg-logo.png",
+    "url": "http://goteborg.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "http://goteborg.com/sokresultat/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "sameAs" :
+      ["http://www.facebook.com/goteborgcom",
+      "http://www.twitter.com/goteborgcom",
+      "http://pinterest.com/goteborgcom/",
+      "http://youtube.com/goteborgcom"],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Göteborg & Co",
+      "telephone": "+4631-368 40 00",
+      "url": "http://goteborgco.se",
+      "logo": "http://pages.goteborg.com/images/goteborgco-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Göteborg, Sweden",
+        "postalCode": "412 51",
+        "streetAddress": "Mässans gata 8"
+      }
+    }
+  }
+  </script>
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="Playground for Goteborg.com" />
@@ -14,8 +49,6 @@
   <meta property="og:description" content="Göteborgs största uteservering." />
   <meta property="place:location:latitude" content="57.6972555" />
   <meta property="place:location:longitude" content="11.9798906" />
-  <meta property="bar-himmel:location:latitude" content="57.6972555" />
-  <meta property="bar-himmel:location:longitude" content="11.9798906" />
   <!-- Twitter specific -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@goteborgcom">
@@ -28,17 +61,41 @@
 
   <link rel="stylesheet" href="../assets/min/main.css">
 </head>
-<body>
+<!-- Schema - Website -->
+<body itemscope itemtype="http://schema.org/WebPage">
+  <!-- Schema - Website - url -->
+  <meta itemprop="url" content="http://pages.goteborg.com"/>
+  <!-- Schema - Website - name -->
+  <meta itemprop="name" content="Goteborg.com - Göteborgs officiella besöksguide">
+  <!-- Schema - Website - description -->
+  <meta itemprop="description" content="Välkommen till Göteborgs officiella besöksguide. Här hittar du sevärdheter, evenemang, hotell, restauranger platser värda att besöka i Göteborg. Boka ett boendepaket eller köp Göteborg City Card direkt i onlineshoppen.">
+  <!-- Schema - Website - image -->
+  <meta itemprop="image" content="http://pages.goteborg.com/images/skargard-video.jpg">
+  <!-- Schema - Website - SearchAction -->
+  <form action="" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+    <!-- Schema - Website - SearchAction - target -->
+    <meta itemprop="target" content="http://pages.goteborg.com/sokresultat/?q={q}">
+    <!-- Schema - Website - SearchAction query-input -->
+    <input itemprop="query-input" type="search" name="q" placeholder="Sök">
+  </form>
+  <!-- Schema - Website - Place -->
   <article class="article" itemscope itemtype="http://schema.org/Place">
+    <!-- Schema - Website - Place - geo -->
     <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-     <meta itemprop="latitude" content="57.6972555" />
-     <meta itemprop="longitude" content="11.9798906" />
-   </div>
+      <!-- Schema - Website - Place - Geo - latitude -->
+      <meta itemprop="latitude" content="57.6972555" />
+      <!-- Schema - Website - Place - Geo - longitude -->
+      <meta itemprop="longitude" content="11.9798906" />
+    </div>
+    <!-- Schema - Website - Place - url -->
     <meta itemprop="url" content="http://pages.goteborg.com/things/meta-tags.html">
+    <!-- Schema - Website - Place - image -->
     <meta itemprop="image" content="http://pages.goteborg.com/images/bar-himmel.jpg">
     <div class="article-image" style="background-image: url('../images/bar-himmel.jpg');" alt=""></div>
     <header class="article-header">
+      <!-- Schema - Website - Place - name -->
       <h1 class="title" itemprop="name">Bar Himmel</h1>
+      <!-- Schema - Website - Place - description -->
       <h3 class="tagline" itemprop="description">Göteborgs största uteservering.</h3>
       <p class="preamble">Bar Himmel har flyttat upp sin uteservering på konstmuseets entrétak med utsikt över Göteborgs paradgata, Avenyn. Eftersom Götaplatsen är en av de soligare platserna i centrala Göteborg har den länge utgjort en mötesplats för göteborgare och turister under sommarmånaderna.</p>
     </header>
@@ -52,8 +109,10 @@
       <p>
         Adress: Götaplatsen 1,<br>
         Hållplats: Valand<br>
+        <!-- Schema - Website - Place - telefon -->
         Telefonnummer: <span itemprop="telephone">+46705-950011</span><br>
         E-post: <a href="mailto:info@barhimmel.se">info@barhimmel.se</a><br>
+        <!-- Schema - Website - Place - sameAs -->
         Hemsida: <a href="http://www.barhimmel.se" target="_blank" itemprop="sameAs">http://www.barhimmel.se</a><br>
       </p>
     </div>

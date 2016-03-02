@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../node_modules/aframe/dist/aframe.js" charset="utf-8"></script>
+</head>
+<body>
+
+  <a-scene>
+    <a-entity position="0 1.8 5" rotation="0 90 0">
+      <a-entity camera="" look-controls="" wasd-controls="" rotation="-5.729577951308239 16.157409822689203 0" position="0 0 0">
+      </a-entity>
+    </a-entity>
+
+    <a-sky src="../images/gustafs-plats-sphere.jpg">
+      <a-root>
+        <a-entity geometry="primitive: sphere;
+                        radius: 5000;
+                        segmentsWidth: 64;
+                        segmentsHeight: 64" material="shader: flat;
+                        src: url(../images/gustafs-plats-sphere.jpg);
+                        color: #FFF;
+                        fog: false" scale="-1 1 1">
+        </a-entity>
+      </a-root>
+    </a-sky>
+
+    <a-entity light="color:#fff;type:ambient" data-aframe-default-light=""></a-entity>
+    <a-entity light="color:#fff;intensity:0.2" position="-1 2 1" data-aframe-default-light=""></a-entity>
+  </a-scene>
+
+
+  <canvas class="a-canvas" width="1919" height="283" style="width: 1919px; height: 283px;"></canvas>
+
+  <div class="a-enter-vr" data-a-enter-vr-no-headset="" data-a-enter-vr-no-webvr="">
+    <div class="a-enter-vr-modal">
+      <p>Your browser does not support WebVR. To enter VR, use a VR-compatible browser, or a mobile phone.</p><a href="http://mozvr.com/#start" target="_blank">Learn more.</a>
+    </div>
+    <button class="a-enter-vr-button"></button>
+  </div>
+  <div class="a-orientation-modal a-hidden">
+    <button>Exit VR</button>
+  </div>
+
+  <!-- <a-scene>
+    <a-image src="../images/gustafs-plats-sphere.jpg" width="460.8" height="230.4"></a-image>
+  </a-scene> -->
+</body>
+</html>

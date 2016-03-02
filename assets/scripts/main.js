@@ -1,5 +1,5 @@
 /*
-  Babel JS
+  Main
 */
 
-import aframe from 'aframe';
+console.log('YEEEAH!');

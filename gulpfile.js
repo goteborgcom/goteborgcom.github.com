@@ -93,10 +93,12 @@ function buildScript(file, watch) {
 }
 
 gulp.task('scripts', function() {
-  return buildScript('main.js', false); // this will run once because we set watch to false
+  buildScript('aframe.js', false); // this will run once because we set watch to false
+  buildScript('main.js', false); // this will run once because we set watch to false
 });
 
 gulp.task('default', ['styles','scripts', 'browser-sync'], function() {
   gulp.watch( ['./assets/styles/**/*.scss'], ['styles'])
-  return buildScript('main.js', true); // browserify watch for JS changes
+  buildScript('aframe.js', true); // browserify watch for JS changes
+  buildScript('main.js', true); // browserify watch for JS changes
 });
